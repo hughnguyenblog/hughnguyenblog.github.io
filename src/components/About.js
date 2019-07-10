@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import hexagon from '../image/hexagon.png';
 import hexagon2 from '../image/hexagon2.png';
 import avatar from '../image/avatar.png';
+import logobrand from '../image/logobrand.png';
 
 import Fade from 'react-reveal/Fade';
 import Flip from 'react-reveal/Flip';
@@ -13,24 +14,28 @@ export class About extends Component {
 		return (
 			<AboutWrapper>
 				<div className="container">
-					<Fade top delay={300}>
-						<nav>
-							<a href="/">Hugh Nguyen</a>
-							<p>Front-End Developer</p>
-						</nav>
-					</Fade>
-					<div className="intro row no-gutters my-4 ">
-						<div className="col col-lg-6 col-md-6 col-12 avatar ">
-							<Fade left delay={500}>
-								<img alt="avatar" src={avatar} style={{ width: '100%' }} />
-							</Fade>
+					<Fade top cascade delay={1200} duration={800}>
+						<div className="bar">
+							<img alt="logobrand" src={logobrand} style={{ height: '100%', margin: '15px 0 0 0' }} />
+							<span>
+								<a href="/">Hugh Nguyen</a>
+								<p>Front-End Developer</p>
+							</span>
 						</div>
-						<Fade left delay={1000}>
-							<div className="col col-lg-6 col-md-6 col-12 info px-5">
+					</Fade>
+
+					<div className="intro row no-gutters my-4 ">
+						<Flip cascade duration={1600}>
+							<div className="col col-lg-6 col-md-6 col-12 avatar ">
+								<img alt="avatar" src={avatar} style={{ width: '100%' }} />
+							</div>
+						</Flip>
+
+						<div className="col col-lg-6 col-md-6 col-12 info px-5">
+							<Fade left delay={1300} duration={1000}>
 								<h1> I'm Hugh</h1>
-								<br />
 								<p>
-									I'm a Junior Front-End Developer <strong>@ HCMC - Vietnam.</strong>
+									I'm a Junior Front-End Developer <strong>@ HCM City-Vietnam.</strong>
 									<br />
 									I graduated from <strong>PTIT</strong>{' '}
 									{'(Posts and Telecommunications Institute of Technology)'} with major{' '}
@@ -38,15 +43,18 @@ export class About extends Component {
 									A <strong>Coder</strong>, a <strong>Travel Lover</strong> and a{' '}
 									<strong>Blogger.</strong>
 								</p>
-							</div>
-						</Fade>
-					</div>
-					<Flip left cascade duration={1300}>
-						<div>
-							<img alt="avatar" src={hexagon} style={{ width: '40%' }} className="img2" />
-							<img alt="avatar" src={hexagon2} className="img3" />
+							</Fade>
 						</div>
-					</Flip>
+					</div>
+
+					<div>
+						<Flip top duration={1100} delay={1500}>
+							<img alt="avatar" src={hexagon} style={{ width: '40%' }} className="img2" />
+						</Flip>
+						<Flip>
+							<img alt="avatar" src={hexagon2} className="img3" />
+						</Flip>
+					</div>
 				</div>
 			</AboutWrapper>
 		);
@@ -57,16 +65,17 @@ const AboutWrapper = styled.section`
 	background-color: ghostwhite;
 	height: 100%;
 	width: 100%;
-	transition: all 0.5s ease-in-out;
 	overflow: hidden;
-	padding-bottom: 4rem;
+	padding-bottom: 4.5rem;
 	.avatar {
-		filter: drop-shadow(10px 5px 5px #888);
+		z-index: 100 !important;
+		filter: drop-shadow(10px 5px 10px #888);
 	}
-	nav {
+	.bar {
 		height: 10vh;
-		padding-left: 2rem;
-		padding-top: 1rem;
+		padding-left: 3rem;
+		padding-top: 2rem;
+		display: flex;
 		a {
 			font-family: 'Noticia Text', serif;
 			color: var(--mainBlack);
@@ -84,6 +93,7 @@ const AboutWrapper = styled.section`
 		justify-content: center;
 		.info {
 			z-index: 2 !important;
+			font-size: 1.5rem;
 		}
 		h1 {
 			font-family: 'Noticia Text', serif;
@@ -99,18 +109,19 @@ const AboutWrapper = styled.section`
 	.img3 {
 		width: 70%;
 		position: absolute;
-		top: 70vh;
+		bottom: 20vw;
 		right: 1vh;
 		z-index: 1 !important;
 	}
 
-	@media (min-width: 768px) and (max-width: 1800px) {
+	@media (min-width: 1025px) and (max-width: 1800px) {
 		position: relative;
-		nav {
-			padding: 2rem;
+		height: 100vh;
+		.bar {
+			height: 10vh;
 		}
 		.info {
-			margin-top: 12%;
+			margin-top: 6rem;
 			h1 {
 				text-align: start;
 			}
@@ -118,15 +129,15 @@ const AboutWrapper = styled.section`
 		.img2 {
 			display: block;
 			position: absolute;
-			bottom: -18vw;
+			bottom: -20vw;
 			right: -12vw;
 		}
 		.img3 {
-			width: 20%;
+			width: 25%;
 			display: block;
 			position: absolute;
-			top: -5vw;
-			right: 33vw;
+			top: -8.5vw;
+			right: 22vw;
 		}
 	}
 `;
