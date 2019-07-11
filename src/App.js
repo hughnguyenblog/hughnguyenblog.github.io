@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
 import './App.css';
+
 import About from './components/About';
 import WorkExperience from './components/WorkExperience';
 import Skill from './components/Skill';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Blog from './components/Blog';
+import Work from './components/Work';
 
 class App extends Component {
 	render() {
@@ -15,7 +16,7 @@ class App extends Component {
 				<About />
 				<WorkExperience />
 				<Skill />
-				<Blog />
+				<Work />
 				<Contact />
 				<Footer />
 			</div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Fade';
 import Tada from 'react-reveal/Tada';
 
 export class WorkExperience extends Component {
@@ -14,7 +14,7 @@ export class WorkExperience extends Component {
 					</Tada>
 					<ul className="timeline pb-3">
 						<li>
-							<Fade big right cascade>
+							<Slide right duration={500}>
 								<br />
 								<samp>Sep 2017 - March 2018</samp>
 								<h3>Bitcode Technology HCMC</h3>
@@ -36,11 +36,11 @@ export class WorkExperience extends Component {
 										, <a href="http://tuonglaifoods.vn/">Tương Lai Food </a>, ... ).
 									</li>
 								</ul>
-							</Fade>
+							</Slide>
 						</li>
 
 						<li>
-							<Fade big right cascade duration={600}>
+							<Slide right duration={500}>
 								<br />
 								<samp>Feb 2019 - Now</samp>
 								<h3>Seft Study & Part-time Coffee Store</h3>
@@ -119,7 +119,7 @@ export class WorkExperience extends Component {
 									<br />
 									<li>
 										Product Store ( React + Redux ( Redux-Thunk ) + React-Router ) :{' '}
-										<a href="https://tzmy1.codesandbox.io/">Demo</a>
+										<a href="https://w654l.codesandbox.io/">Demo</a>
 										<br />
 										<ul>
 											<li>Filter Search products method, AddToCart method, BackDrop actions</li>
@@ -133,7 +133,7 @@ export class WorkExperience extends Component {
 										</ul>
 									</li>
 								</ul>
-							</Fade>
+							</Slide>
 						</li>
 						<li />
 					</ul>
@@ -144,6 +144,7 @@ export class WorkExperience extends Component {
 }
 
 const WEWrapper = styled.section`
+	z-index: 5 !important;
 	color: ghostwhite;
 	background-color: #252827;
 	height: 100%;
@@ -154,6 +155,7 @@ const WEWrapper = styled.section`
 		position: relative;
 		text-align: left;
 		font-size: 1.3rem;
+		padding-left: 1rem;
 	}
 	ul.timeline:before {
 		content: '';
@@ -171,7 +173,7 @@ const WEWrapper = styled.section`
 			font-family: var(--fontText);
 			list-style-type: square;
 			li {
-				list-style-type: circle;
+				font-size: 0.97rem;
 			}
 			a {
 				text-decoration: none;

@@ -8,6 +8,7 @@ import logobrand from '../image/logobrand.png';
 
 import Fade from 'react-reveal/Fade';
 import Flip from 'react-reveal/Flip';
+import Jump from 'react-reveal/Jump';
 
 export class About extends Component {
 	render() {
@@ -25,15 +26,17 @@ export class About extends Component {
 					</Fade>
 
 					<div className="intro row no-gutters my-4 ">
-						<Flip cascade duration={1600}>
+						<Flip cascade duration={1300}>
 							<div className="col col-lg-6 col-md-6 col-12 avatar ">
 								<img alt="avatar" src={avatar} style={{ width: '100%' }} />
 							</div>
 						</Flip>
 
 						<div className="col col-lg-6 col-md-6 col-12 info px-5">
-							<Fade left delay={1300} duration={1000}>
-								<h1> I'm Hugh</h1>
+							<Fade left delay={1200} duration={1000}>
+								<Jump delay={1300} duration={1200}>
+									<h1>Hi, I'm Hugh</h1>
+								</Jump>
 								<p>
 									I'm a Junior Front-End Developer <strong>@ HCM City-Vietnam.</strong>
 									<br />
@@ -51,7 +54,7 @@ export class About extends Component {
 						<Flip top duration={1100} delay={1500}>
 							<img alt="avatar" src={hexagon} style={{ width: '40%' }} className="img2" />
 						</Flip>
-						<Flip>
+						<Flip right cascade delay={1300}>
 							<img alt="avatar" src={hexagon2} className="img3" />
 						</Flip>
 					</div>
@@ -62,13 +65,14 @@ export class About extends Component {
 }
 
 const AboutWrapper = styled.section`
+	position: relative;
 	background-color: ghostwhite;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	padding-bottom: 4.5rem;
 	.avatar {
-		z-index: 100 !important;
+		z-index: 1 !important;
 		filter: drop-shadow(10px 5px 10px #888);
 	}
 	.bar {
@@ -76,6 +80,7 @@ const AboutWrapper = styled.section`
 		padding-left: 3rem;
 		padding-top: 2rem;
 		display: flex;
+
 		a {
 			font-family: 'Noticia Text', serif;
 			color: var(--mainBlack);
@@ -104,17 +109,20 @@ const AboutWrapper = styled.section`
 		}
 	}
 	.img2 {
-		display: none;
+		display: block;
+		position: absolute;
+		bottom: -20vw;
+		right: -12vw;
 	}
 	.img3 {
-		width: 70%;
+		height: 70%;
 		position: absolute;
-		bottom: 20vw;
+		bottom: 14vw;
 		right: 1vh;
-		z-index: 1 !important;
 	}
 
-	@media (min-width: 1025px) and (max-width: 1800px) {
+	@media (min-width: 1025px) and (max-width: 3200px) {
+		overflow: hidden;
 		position: relative;
 		height: 100vh;
 		.bar {
@@ -131,9 +139,10 @@ const AboutWrapper = styled.section`
 			position: absolute;
 			bottom: -20vw;
 			right: -12vw;
+			z-index: 2 !important;
 		}
 		.img3 {
-			width: 25%;
+			height: 50%;
 			display: block;
 			position: absolute;
 			top: -8.5vw;
