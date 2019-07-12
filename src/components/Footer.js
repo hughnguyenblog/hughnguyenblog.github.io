@@ -34,12 +34,12 @@ export class Footer extends Component {
 					<div className="text-center my-2">
 						<button className="btn btv btn-outline-danger ">About My CV</button>
 					</div>
-					<small className="d-flex blockquote-footer justify-content-center text-light pt-2">
+					<small className="blockquote-footer text-center text-light pt-2">
 						From Hugh with
 						<Jello forever>
-							_
 							<FaHeart size={24} style={{ color: '#ed3833' }} />
-						</Jello>_ @HoChiMinh City, VietNam in {new Date().getFullYear()}
+						</Jello>
+						@ HoChiMinh City, VietNam in {new Date().getFullYear()}
 					</small>
 				</div>
 			</FooterWrapper>
