@@ -55,7 +55,6 @@ export class Contact extends Component {
 								<label>Your Email:</label>
 
 								<input type="email" placeholder="So I Can Reply You Back 😁" className="form-control" />
-								<small className="text-muted">My Email is : hughnguyen1305@gmail.com</small>
 							</div>
 							<div className="form-group my-3">
 								<label>Your Whisper Here:</label>
