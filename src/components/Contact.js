@@ -82,9 +82,9 @@ export class Contact extends Component {
 	render() {
 		return (
 			<ContactWrapper>
-				<Fade className="container py-4">
+				<Fade className="container py-5">
 					<Fade right>
-						<h1 className="title text-center">Tell Me Something</h1>
+						<h1 className="title text-center pt-3">Tell Me Something</h1>
 						<cite className="blockquote-footer text-center ">
 							May I do something for U, Your Feedbacks, Job Offering or Anything/Everything <br />I'm a
 							good listener !! PEACEEEE !!! 🤝🤝

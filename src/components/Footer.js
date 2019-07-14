@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Jello from 'react-reveal/Jello';
+import CV from '../Nguyen Ngoc Huy - CV.pdf';
 
 import { FaHeart } from 'react-icons/fa';
 
 export class Footer extends Component {
+	state = {
+		isOpenCV: false
+	};
+	openCV = () => {
+		console.log(this.state.isOpenCV);
+		this.setState({
+			isOpenCV: !this.state.isOpenCV
+		});
+	};
 	render() {
 		return (
 			<FooterWrapper>
@@ -32,7 +42,30 @@ export class Footer extends Component {
 					</div>
 
 					<div className="text-center my-2">
-						<button className="btn btv btn-outline-danger ">About My CV</button>
+						<a
+							href="https://drive.google.com/file/d/1EoCSHb_2CtZW_rPttp7ibnX6y0xJI0So/view?usp=sharing"
+							target="_blank"
+							className="btn btv btn-outline-danger "
+							rel="noopener noreferrer"
+						>
+							About My CV
+						</a>
+						<button className="btn btv btn-outline-danger" onClick={this.openCV}>
+							Open my CV
+						</button>
+						{this.state.isOpenCV === true ? (
+							<Backdrop>
+								<div className="container">
+									<iframe
+										src={CV + '#zoom=60'}
+										title="Hugh CV"
+										style={{ width: '90%', height: '92vh', marginTop: '2rem' }}
+										frameborder="0"
+									/>
+								</div>
+							</Backdrop>
+						) : null}
+						{/* <iframe src={CV} title="Hugh CV" style={{ width: '100%', height: '95vh' }} frameborder="0" /> */}
 					</div>
 					<small className="blockquote-footer text-center text-light pt-2">
 						From Hugh with
@@ -62,6 +95,18 @@ const FooterWrapper = styled.section`
 			color: crimson;
 		}
 	}
+`;
+
+const Backdrop = styled.div`
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 990;
 `;
 
 export default Footer;

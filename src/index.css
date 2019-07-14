@@ -12,11 +12,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #888;
+	background: #ed3833;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #555;
+	background: crimson;
 }
 .title {
 	text-decoration: crimson solid underline;
