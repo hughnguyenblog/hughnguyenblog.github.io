@@ -21,7 +21,7 @@ export class Footer extends Component {
 					<h5 className="text-center">You Can Get Me Via 👇</h5>
 					<div className="text-center">
 						<div className="social">
-							Phone/Zalo/Skype :<a href="skype:live:b12061fb97add7ea?chat"> (+84) 947 20 66 88</a>{' '}
+							Phone/Zalo/Skype :<a href="skype:live:hughnguyen1305?chat"> (+84) 947 20 66 88</a>{' '}
 						</div>
 						<div className="social">
 							Email:{' '}
