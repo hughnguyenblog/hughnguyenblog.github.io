@@ -43,8 +43,12 @@ export class About extends Component {
 									I graduated from <strong>PTIT</strong>{' '}
 									{'(Posts and Telecommunications Institute of Technology)'} with major{' '}
 									<strong>Information Technology</strong> in 2017.<br />
-									A <strong>Coder</strong>, a <strong>Travel Lover</strong> and a{' '}
-									<strong>Blogger.</strong>
+									I'm just a <strong> normal guy</strong> but I'm a{' '}
+									<strong>Persevering person</strong> which is I <strong>keep myself</strong> to{' '}
+									<strong>solve the problem</strong> and do it <strong>with better way</strong>.<br />And
+									I <strong>eager to learn</strong> as much as possible not only the{' '}
+									<strong>technical</strong>
+									but also the <strong>company lifestyle</strong>, <strong>social lifestyle</strong>
 								</p>
 							</Fade>
 						</div>
@@ -97,8 +101,8 @@ const AboutWrapper = styled.section`
 		width: 100%;
 		justify-content: center;
 		.info {
-			z-index: 2 !important;
-			font-size: 1.5rem;
+			z-index: 3 !important;
+			font-size: 1.2rem;
 		}
 		h1 {
 			font-family: 'Noticia Text', serif;

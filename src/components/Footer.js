@@ -42,7 +42,7 @@ export class Footer extends Component {
 
 					<div className="text-center my-2">
 						<a
-							href="https://drive.google.com/file/d/1EoCSHb_2CtZW_rPttp7ibnX6y0xJI0So/view"
+							href="https://drive.google.com/file/d/16YjbAuz8VgluKn3Uq7MxmBm3Cpmko2Oa/view"
 							target="_blank"
 							className="btn btv btn-outline-danger "
 							rel="noopener noreferrer"

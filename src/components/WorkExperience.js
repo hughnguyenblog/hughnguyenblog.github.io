@@ -16,9 +16,9 @@ export class WorkExperience extends Component {
 						<li>
 							<Slide right duration={500}>
 								<br />
-								<samp>Sep 2017 - March 2018</samp>
+								<samp>Sep 2017 - Feb 2018</samp>
 								<h3>Bitcode Technology HCMC</h3>
-								<em>Junior Graphic Designer & Front-End Dev</em>
+								<em>Junior Front-End Dev</em>
 								<hr style={{ borderColor: 'ghostwhite' }} />
 								<ul>
 									<li>

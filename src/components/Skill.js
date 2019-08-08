@@ -66,14 +66,14 @@ export class Skill extends Component {
 														<small className="text-muted lead ">~ 1 Year</small>
 													</h4>
 
-													<strong style={{ textAlign: 'right' }}>90%</strong>
+													<strong style={{ textAlign: 'right' }}>85%</strong>
 												</div>
 
 												<div className="progress">
 													<div
 														className="progress-bar"
 														style={{
-															width: '90%',
+															width: '85%',
 															background: ' linear-gradient( to left, #800080, #49577F)'
 														}}
 													/>
